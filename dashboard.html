@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaFlow Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.8/index.global.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>🚀 Workspaces</h2>
+                <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+            </div>
+            <button class="add-btn" onclick="addWorkspace()">➕ Add Workspace</button>
+            <ul id="workspaceList"></ul>
+            <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+            <button class="logout-btn" onclick="signOut()">🚪 Logout</button>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1 id="welcomeUser">Welcome!</h1>
+            </header>
+
+            <div class="task-section">
+                <h2 id="workspaceTitle">Tasks</h2>
+                <input type="text" id="taskInput" placeholder="Enter task">
+                <input type="date" id="taskDate">
+                <button class="add-btn" onclick="addTask()">➕ Add Task</button>
+                <ul id="taskList" class="task-list"></ul>
+            </div>
+
+            <div id="calendar"></div>
+            <div id="editor"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

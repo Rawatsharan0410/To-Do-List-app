@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaFlow - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-card">
+            <h2>Welcome to <span class="gradient-text">NovaFlow</span></h2>
+            <p>Your next-generation productivity hub.</p>
+            <input type="text" id="userId" placeholder="Enter your username">
+            <button onclick="signIn()">🚀 Enter Workspace</button>
+        </div>
+    </div>
+
+    <script>
+        function signIn() {
+            const userId = document.getElementById("userId").value.trim();
+            if (!userId) {
+                alert("Please enter a username!");
+                return;
+            }
+            localStorage.setItem("currentUser", userId);
+            window.location.href = "dashboard.html";
+        }
+    </script>
+</body>
+</html>
